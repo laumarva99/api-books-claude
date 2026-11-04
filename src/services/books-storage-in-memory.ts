@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from "uuid";
 import booksData from "../data/books.json";
 import type { Book, BookData, BooksStorage } from "./books-storage";
 
@@ -15,24 +16,19 @@ export class BooksStorageInMemory implements BooksStorage {
     return [...this.books];
   }
 
-  async findById(id: number): Promise<Book | undefined> {
+  async findById(id: string): Promise<Book | undefined> {
     return this.books.find((book) => book.id === id);
   }
 
-  /**
-   * El id es el mayor id existente + 1 (no `books.length + 1`): así no se
-   * repiten ids si hay huecos.
-   * Ojo: si se borra el libro con el mayor id, ese id se vuelve a usar.
-   */
+  /** El id es un UUID v4 nuevo: nunca se repite, aunque se borren libros. */
   async create(data: BookData): Promise<Book> {
-    const nextId = Math.max(0, ...this.books.map((book) => book.id)) + 1;
-    const newBook: Book = { id: nextId, ...data };
+    const newBook: Book = { id: uuidv4(), ...data };
 
     this.books.push(newBook);
     return newBook;
   }
 
-  async replace(id: number, data: BookData): Promise<Book | undefined> {
+  async replace(id: string, data: BookData): Promise<Book | undefined> {
     const index = this.findIndex(id);
     if (index === -1) return undefined;
 
@@ -42,7 +38,7 @@ export class BooksStorageInMemory implements BooksStorage {
     return replacedBook;
   }
 
-  async update(id: number, data: Partial<BookData>): Promise<Book | undefined> {
+  async update(id: string, data: Partial<BookData>): Promise<Book | undefined> {
     const index = this.findIndex(id);
     if (index === -1) return undefined;
 
@@ -53,7 +49,7 @@ export class BooksStorageInMemory implements BooksStorage {
     return updatedBook;
   }
 
-  async remove(id: number): Promise<Book | undefined> {
+  async remove(id: string): Promise<Book | undefined> {
     const index = this.findIndex(id);
     if (index === -1) return undefined;
 
@@ -61,7 +57,7 @@ export class BooksStorageInMemory implements BooksStorage {
     return removedBook;
   }
 
-  private findIndex(id: number): number {
+  private findIndex(id: string): number {
     return this.books.findIndex((book) => book.id === id);
   }
 }

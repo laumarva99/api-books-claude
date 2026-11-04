@@ -11,7 +11,8 @@
 
 /** Un libro tal y como se guarda y se devuelve en la API. */
 export interface Book {
-  id: number;
+  /** UUID asignado por el almacenamiento. */
+  id: string;
   author: string;
   country: string;
   imageLink: string;
@@ -33,10 +34,10 @@ export interface BooksStorage {
    * Busca un libro por su id.
    * @returns El libro, o `undefined` si no existe.
    */
-  findById(id: number): Promise<Book | undefined>;
+  findById(id: string): Promise<Book | undefined>;
 
   /**
-   * Guarda un libro nuevo y le asigna un id.
+   * Guarda un libro nuevo y le asigna un id (UUID).
    * @param data - Datos ya validados.
    * @returns El libro creado, con su id.
    */
@@ -46,17 +47,17 @@ export interface BooksStorage {
    * Sustituye por completo los datos de un libro (PUT). El id no cambia.
    * @returns El libro sustituido, o `undefined` si no existe.
    */
-  replace(id: number, data: BookData): Promise<Book | undefined>;
+  replace(id: string, data: BookData): Promise<Book | undefined>;
 
   /**
    * Modifica solo los campos recibidos de un libro (PATCH). El id no cambia.
    * @returns El libro modificado, o `undefined` si no existe.
    */
-  update(id: number, data: Partial<BookData>): Promise<Book | undefined>;
+  update(id: string, data: Partial<BookData>): Promise<Book | undefined>;
 
   /**
    * Borra un libro.
    * @returns El libro borrado, o `undefined` si no existía.
    */
-  remove(id: number): Promise<Book | undefined>;
+  remove(id: string): Promise<Book | undefined>;
 }
