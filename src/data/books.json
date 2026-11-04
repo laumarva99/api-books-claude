@@ -1,6 +1,6 @@
 [
-    {
-    "id": 1,
+  {
+    "id": "99d9de0b-95a4-4b4f-b684-ed478b4a15a7",
     "author": "Chinua Achebe",
     "country": "Nigeria",
     "imageLink": "images/things-fall-apart.jpg",
@@ -11,7 +11,7 @@
     "year": 1958
   },
   {
-    "id": 2,
+    "id": "f04eeffa-a103-4508-bfed-8285afc85d2c",
     "author": "Hans Christian Andersen",
     "country": "Denmark",
     "imageLink": "images/fairy-tales.jpg",
@@ -22,7 +22,7 @@
     "year": 1836
   },
   {
-    "id": 3,
+    "id": "3c60d1cc-d181-4a8c-85db-8f6e3ab300fd",
     "author": "Débora Melo",
     "country": "Spain",
     "imageLink": "images/croquetas-en-bucle-infinito.jpg",
@@ -33,7 +33,7 @@
     "year": 2004
   },
   {
-    "id": 4,
+    "id": "2ea4c0c9-626c-4b6c-8634-da39fee0ff8d",
     "author": "Aitor Tilla",
     "country": "Spain",
     "imageLink": "images/paella-con-null-pointer.jpg",
@@ -44,7 +44,7 @@
     "year": 1999
   },
   {
-    "id": 5,
+    "id": "eea8dbd9-f231-419e-8bde-6d8ad6cdd0f6",
     "author": "Susana Oria",
     "country": "Spain",
     "imageLink": "images/recursividad-a-la-carbonara.jpg",
@@ -55,7 +55,7 @@
     "year": 2017
   },
   {
-    "id": 6,
+    "id": "c448badb-c0f5-4d62-9de0-488a851c1a2f",
     "author": "Ana Lista",
     "country": "Spain",
     "imageLink": "images/el-misterio-del-punto-y-coma-perdido.jpg",
@@ -66,7 +66,7 @@
     "year": 2011
   },
   {
-    "id": 7,
+    "id": "5be64627-d5c6-4065-b9cb-34cb94d4731a",
     "author": "Armando Bronca",
     "country": "Spain",
     "imageLink": "images/tortilla-de-patatas-con-merge-conflicts.jpg",
@@ -77,7 +77,7 @@
     "year": 2019
   },
   {
-    "id": 8,
+    "id": "4a17f849-8858-4aa9-912c-e754c84ae5b6",
     "author": "Elena Nito",
     "country": "Spain",
     "imageLink": "images/gazpacho-en-la-nube-escalado-horizontal-del-pepino.jpg",
@@ -88,7 +88,7 @@
     "year": 2023
   },
   {
-    "id": 9,
+    "id": "706f7772-569f-4f0f-a4e1-27d28bdfbd59",
     "author": "Lola Mento",
     "country": "Spain",
     "imageLink": "images/promesas-sin-resolver-y-churros-sin-chocolate.jpg",
@@ -99,7 +99,7 @@
     "year": 2015
   },
   {
-    "id": 10,
+    "id": "4fee7b15-3d58-42a5-bae9-798003759921",
     "author": "Rosa Melano",
     "country": "Spain",
     "imageLink": "images/undefined-a-la-plancha.jpg",
